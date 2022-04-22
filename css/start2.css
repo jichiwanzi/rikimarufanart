@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+
+a img{
+	border:none;
+}
+
+#s_pic, #v_pic{
+	position: relative;
+	height:100vh;
+	width: auto;
+}
+
+
+
+#s_pic img, #v_pic img{
+	width:100%;
+	height:100vh;
+	
+	opacity:0;
+	
+	animation-name: show;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	
+	-webkit-animation-name: show; /* 動畫名稱 */
+    -webkit-animation-duration: 2s; /* 動畫時間3秒 */
+    -webkit-animation-iteration-count: 1; /* 播放次數1次 */
+    -webkit-animation-timing-function: ease; /* 動態方式漸慢開始與結束 */
+    -webkit-animation-delay: 0.5s; /* x秒後播放 */
+    -webkit-animation-direction: normal; /* 動畫播放順序為順向 */
+    -webkit-animation-fill-mode: forwards; /* 動畫結束後停格於最後一格，需搭配direction */
+}
+
+@keyframes show{
+	from  {
+		opacity: 0;
+	}
+	
+	to  {
+		opacity: 1;
+	}
+}
+
+#s_pic{
+	display:none;	
+}
+
+@media only screen and (min-width: 768px) {
+
+#v_pic{
+	display:none;
+	
+}
+
+#s_pic{
+	display:block;	
+	
+}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
